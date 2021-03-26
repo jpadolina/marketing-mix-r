@@ -16,7 +16,7 @@ The dataset used contains advertising activity from 10 different channels, plus 
 This was a group assignment. My role in this project was the initial modeler in R, but the whole group had a say in the final modeling decisions, and the report was also written as a group.
 
 ## Data Dictionary
-ADV_Total -	Total Advertising Spend in the month, comprises ADV_Offline and ADV_Online
+ADV_Total -	Total Advertising Spend in the month, comprises ADV_Offline and ADV_Online\n
 ADV_Offline -	Total Offline Advertising Spend, comprises Catalogs_ExistCust, Catalogs_Winback, Catalogs_NewCust in the month
 Catalogs_ExistCust -	Amount spent on Shopping Catalogs sent to existing Customers in the month
 Catalogs_Winback -	Amount spent on Shopping Catalogs sent to Customers (who have not bought for at least 6 months) in the month
