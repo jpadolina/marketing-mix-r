@@ -14,3 +14,18 @@ The dataset used contains advertising activity from 10 different channels, plus 
 
 ## Division of work
 This was a group assignment. My role in this project was the initial modeler in R, but the whole group had a say in the final modeling decisions, and the report was also written as a group.
+
+## Data Dictionary
+ADV_Total -	Total Advertising Spend in the month, comprises ADV_Offline and ADV_Online
+ADV_Offline -	Total Offline Advertising Spend, comprises Catalogs_ExistCust, Catalogs_Winback, Catalogs_NewCust in the month
+Catalogs_ExistCust -	Amount spent on Shopping Catalogs sent to existing Customers in the month
+Catalogs_Winback -	Amount spent on Shopping Catalogs sent to Customers (who have not bought for at least 6 months) in the month
+Catalogs_NewCust -	Amount spent on Shopping Catalogs sent to New Customers in the month
+Mailings -	Amount spent on Mailings (excluding Catalogs) sent to Customers. Mailing include flyers, postcards and letters in the month
+ADV_online -	Total Online Advertising Spend, comprises Banner, Search, SocialMedia, Newsletter, Retargeting and Portals in the month
+Banner -	Amount spent on Banner ads in the month
+Search -	Amount spent on Search ads in the month
+SocialMedia -	Amount spent on Social Media ads in the month
+Newsletter - 	Amount spent on Newsletter ads in the month
+Retargeting -	Amount spent on Retargeting ads in the month (https://retargeter.com/what-is-retargeting-and-how-does-it-work/)
+Portals -	Amount spent on ad portal advertising in the month (https://www.marketingterms.com/dictionary/portal/)
