@@ -3,12 +3,11 @@ rm(list=ls())
 library(readxl)
 library(Hmisc) 
 
-#load data
+#load the data
 multdata <- read_excel("HW2_MultimediaHW.xlsx")
-#obtain summary stats for the data
 
+#obtain summary stats for the data
 summary(multdata)
-colnames(multdata)
 
 #Generate the Variables of interest
 ## Dependent variable (sales)
@@ -27,15 +26,14 @@ on4<-multdata$Newsletter
 on5<-multdata$Retargeting
 on6<-multdata$Portals
 
-#2a)
-#Diminishing Returns model - sqrt(x)
+# Add square root transformations of x to demonstrate Diminishing Returns
 SqM1=sqrt(off1)
 SqM2=sqrt(off2)
 SqM3=sqrt(off3)
 SqM4=sqrt(off4)
 SqM5=sqrt(on1)
 SqM6=sqrt(on2)
-#SqM7=sqrt(on3)
+#SqM7=sqrt(on3) <- again, variable is blank in dataset
 SqM8=sqrt(on4)
 SqM9=sqrt(on5)
 SqM10=sqrt(on6)
@@ -99,7 +97,7 @@ AIC(regmod3)
 BIC(regmod3)
 
 #MODEL SELECTION PHASE
-# Drop insignificant variables one at a time to minimize AIC and BIC.
+# Drop insignificant variables manually to minimize AIC and BIC.
 # Currently no predictors are statistically significant at the 5% level of significance.
 
 regmod4 <-lm(Sales~Stm1+SqM1+SqM2+SqM3+SqM4+SqM5+SqM8+SqM9+SqM10) #Dropped var 6
@@ -116,6 +114,7 @@ regmod6 <-lm(Sales~Stm1+SqM1+SqM2+SqM3+SqM8+SqM9+SqM10) #Dropped var 5
 summary(regmod6)
 AIC(regmod6)
 BIC(regmod6)
+
 #More variables are showing significance
 
 regmod7 <-lm(Sales~Stm1+SqM1+SqM2+SqM3+SqM8+SqM10) #Dropped var 9
@@ -132,6 +131,7 @@ regmod9 <-lm(Sales~Stm1+SqM2+SqM3+SqM10) #Dropped var 1
 summary(regmod9)
 AIC(regmod9)
 BIC(regmod9)
+
 #This is our final focal model.
 
 finalmod <- regmod9
